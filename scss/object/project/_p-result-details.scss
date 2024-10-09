@@ -1,0 +1,79 @@
+@use '../../foundation/variable' as *;
+@use '../../foundation/mixin' as *;
+
+
+.p-result-details__inner {
+  padding-top: 7rem;
+  @include sp {
+  padding-top: 5rem;
+  }
+}
+
+.p-result-details__image {
+ width: 100%;
+ position: relative;
+}
+
+.p-result-details__title { 
+ font-size: 2.5rem;
+ font-weight: 600      ;
+ line-height: calc(40 / 25);
+ padding-block: 5rem 1.5rem;
+ text-align: left;
+ @include sp {
+   font-size: 2rem;
+   line-height: calc(30 / 20);
+   padding-block: 3rem 0.6rem;
+ }
+}
+
+.p-result-details__date {
+ font-size: 1.7rem;
+ line-height: calc(30 / 17);
+ display: flex;
+ justify-content: left;
+}
+
+.p-result-details__table-area {
+ padding-top: 5.5rem;
+ display: flex;
+ column-gap: 4rem;
+ @include sp {
+  padding-top: 2.1rem;
+   flex-direction: column; 
+   row-gap: 2.3rem;
+ }
+}
+
+.p-result-details__table {
+ width: 40rem; 
+ border: 0.05rem solid #707070; 
+ @include sp {
+   width: 100%;
+ }
+}
+
+.p-result-details__text {
+ width: 44rem;
+ font-size: 1.8rem;
+ line-height: calc(30 / 18); 
+ text-align: left;
+ @include sp {
+   width: 100%;
+ }
+}
+
+.p-result-details__articles-area {
+ padding-block: 6rem 0;
+ @include sp {
+  padding-block: 4rem 0;
+ }
+}
+
+.p-result-details__articles {
+ display: flex;
+ column-gap: 20rem;
+ @include sp {
+  column-gap: 2.2rem;
+ }
+}
