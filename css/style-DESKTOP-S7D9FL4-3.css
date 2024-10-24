@@ -2254,10 +2254,22 @@ a {
 }
 
 .p-sidebar-mail__banner p {
+  position: absolute;
+  top: 8.5rem;
+  left: 2rem;
+  transform: translate(50%, -50%);
   color: #000;
   font-size: 1.8rem;
   font-weight: 600;
   line-height: 1.8333333333;
+}
+@media only screen and (max-width: 767px) {
+  .p-sidebar-mail__banner p {
+    position: absolute;
+    top: 11.5rem;
+    left: 5.6rem;
+    transform: translate(50%, -50%);
+  }
 }
 
 .p-sidebar-blog-search {

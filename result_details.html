@@ -24,9 +24,11 @@
  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@5.3.6/dist/simplebar.min.css"/>
 
  <!-- スタイルシート読み込みに、キャッシュ削除のクエリを追記　style.css更新時に、ver=1.0.2とかに変更していくらしい　-->
- <link rel="stylesheet" type="text/css" href="css/style.css?ver=1.0.3"/>
+ <link rel="stylesheet" type="text/css" href="css/style.css?ver=2.0.4"/>
 
- 
+  <!-- Noto Sans JP フォントの読み込み -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
@@ -39,11 +41,11 @@
             <div class="p-header-logo__image">
               <picture>
                 <source media="(max-width: 767px)" srcset="./images/sp_logo-red20x31.svg">
-                <img src="./images/logo-red32x49.svg" alt="">
+                <img src="./images/logo-red32x49.svg" alt="きたむらミュージックスクール">
               </picture>
             </div>
             <div class="p-header-logo__text">
-              <h1>きたむら<br class="pc"><span>ミュージックスクール</span></h1>
+              <h2>きたむら<br class="pc"><span>ミュージックスクール</span></h2>
             </div>  
           </a>   
         </div>
@@ -76,26 +78,27 @@
     </header>
    
     <main>
+    
       <!-- パンくずリスト -->
       <div class="c-breadcrumb">
         <a href="index.html" class="c-breadcrumb__text c-breadcrumb__text--2-lines">ホーム</a>
         <p class="c-breadcrumb__text c-breadcrumb__text--2-lines">></p>
-        <p class="c-breadcrumb__text c-breadcrumb__text--2-lines">卒業実績</p>
+        <a href="result_list.html" class="c-breadcrumb__text c-breadcrumb__text--2-lines">卒業実績</a>
         <p class="c-breadcrumb__text c-breadcrumb__text--2-lines">></p>
-        <p class="c-breadcrumb__text c-breadcrumb__text--2-lines">ポップス</p>
+        <a href="result_details.html" class="c-breadcrumb__text c-breadcrumb__text--2-lines">ポップス</a>
         <p class="c-breadcrumb__text c-breadcrumb__text--2-lines">></p>
         <p class="c-breadcrumb__text c-breadcrumb__text--2-lines c-breadcrumb__text--result-details">タイトルが入ります。タイトルが入ります。タイトルが入ります。</p>
       </div>
-      
+     
       <div class="p-result-details__inner l-inner">
         <div class="p-result-details__image">
           <picture>
             <source media="(max-width: 767px)" srcset="./images/result_details-mv-sp.jpg">
-            <img src="./images/result_details-mv.jpg" alt="">
+            <img src="./images/result_details-mv.jpg" alt="ポップス">
           </picture>
           <p class="c-caption c-caption--w100">ポップス</p>      
         </div>         
-        <p class="p-result-details__title">タイトルが入ります。タイトルが入ります。タイトルが入ります。</p>
+        <h1 class="p-result-details__title">タイトルが入ります。タイトルが入ります。タイトルが入ります。</h1>
         <time datetime="2024-10-01" class="p-result-details__date">2024.10.01</time>
        
         <div class="p-result-details__table-area">
@@ -132,7 +135,9 @@
               <div class="p-result-details__article p-result-details-article">
                 <p class="p-result-details-article__label-prev">◀︎ 前の記事</p>
                 <div class="p-result-details-article__img-and-title">
-                  <img src="./images/blog-details98.jpg" alt="" class="p-result-details-article__img pc">
+                  <div class="p-result-details-article__image pc">
+                    <img src="./images/blog-details98.jpg" alt="前の記事" >
+                  </div>
                   <p class="p-result-details-article__title">タイトルが入ります。タイトルが入ります。タイトルが入</p>
                 </div>
               </div>
@@ -141,13 +146,14 @@
               <div class="p-result-details__article p-result-details-article">
                 <p class="p-result-details-article__label-next">次の記事 ▶︎</p>
                 <div class="p-result-details-article__img-and-title">
-                  <img src="./images/blog-details98.jpg" alt="" class="p-result-details-article__img pc">
+                  <div class="p-result-details-article__image pc">
+                    <img src="./images/blog-details98.jpg" alt="次の記事">
+                  </div>
                   <p class="p-result-details-article__title">タイトルが入ります。タイトルが入ります。タイトルが入</p>
                 </div>
               </div>
             </a>
-          </div>
-          
+          </div>          
 
           <div class="p-result-details__related-articles  p-result-details-related-articles">
             <div class="p-result-details-related-articles__label">
@@ -158,12 +164,12 @@
                 <div class="p-result-details-related-article-list__image">
                   <picture>
                     <source media="(max-width: 767px)" srcset="./images/result_details-01-sp.jpg">
-                    <img src="./images/result_details-01.jpg" alt="">
+                    <img src="./images/result_details-01.jpg" alt="ロック">
                   </picture>
                   <p class="c-caption c-caption--w-pc100-sp80">ロック</p>                  
                 </div>
                 <div class="p-result-details-related-article-list__title-and-date">
-                  <p class="p-result-details-related-article-list__title">タイトルが入ります。タイトル</p>
+                  <p class="p-result-details-related-article-list__title">タイトルが入ります。タイトルが入ります。タイトルが入ります。</p>
                   <time datetime="2024-10-01" class="p-result-details-related-article-list__date">2024.10.01</time>
                 </div>
               </div>
@@ -173,12 +179,12 @@
                 <div class="p-result-details-related-article-list__image">
                   <picture>
                     <source media="(max-width: 767px)" srcset="./images/result_details-02-sp.jpg">
-                    <img src="./images/result_details-02.jpg" alt="">
+                    <img src="./images/result_details-02.jpg" alt="ジャズ">
                   </picture>
                   <p class="c-caption c-caption--w-pc100-sp80">ジャズ</p>                  
                 </div>
                 <div class="p-result-details-related-article-list__title-and-date">
-                  <p class="p-result-details-related-article-list__title u-flex-1">タイトルが入ります。タイトル</p>
+                  <p class="p-result-details-related-article-list__title u-flex-1">タイトルが入ります。タイトルが入ります。タイトルが入ります。</p>
                   <time datetime="2024-10-01" class="p-result-details-related-article-list__date">2024.10.01</time>
                 </div>
               </div>
@@ -188,12 +194,12 @@
                 <div class="p-result-details-related-article-list__image">
                   <picture>
                     <source media="(max-width: 767px)" srcset="./images/result_details-03-sp.jpg">
-                    <img src="./images/result_details-03.jpg" alt="">
+                    <img src="./images/result_details-03.jpg" alt="ラテン">
                   </picture>
                   <p class="c-caption c-caption--w-pc100-sp80">ラテン</p>                  
                 </div>
                 <div class="p-result-details-related-article-list__title-and-date">
-                  <p class="p-result-details-related-article-list__title">タイトルが入ります。タイトル</p>
+                  <p class="p-result-details-related-article-list__title">タイトルが入ります。タイトルが入ります。タイトルが入ります。</p>
                   <time datetime="2024-10-01" class="p-result-details-related-article-list__date">2024.10.01</time>
                 </div>
               </div>
@@ -214,7 +220,7 @@
         </nav>
         <div class="p-footer__logo">
           <a href="index.html">
-            <img src="./images/logo-white.svg" alt="">
+            <img src="./images/logo-white.svg" alt="きたむらミュージックスクール">
            </a>
         </div>
         <p class="p-footer__copyright">Copyright<span style="font-size: 1em;">©</span>0000 KITAMURA music school Inc. <br class="sp">All Rights</p>
@@ -222,28 +228,28 @@
           <ul>
             <li>
               <a href="">
-                <img src="./images/icon-twitter.svg" alt="">
+                <img src="./images/icon-twitter.svg" alt="twitter">
               </a>
             </li> 
           </ul>
           <ul>
             <li>
               <a href="">
-                <img src="./images/icon-facebook.svg" alt="">
+                <img src="./images/icon-facebook.svg" alt="facebook">
               </a>
             </li> 
           </ul>
           <ul>
             <li>
               <a href="">
-                <img src="./images/icon-youtube.svg" alt="">
+                <img src="./images/icon-youtube.svg" alt="youtube">
               </a>
             </li> 
           </ul>
           <ul>
             <li>
               <a href="">
-                <img src="./images/icon-instagram.svg" alt=""> 
+                <img src="./images/icon-instagram.svg" alt="instagram"> 
               </a>
             </li> 
           </ul>       
@@ -253,7 +259,7 @@
     
     <a href="#" class="c-top-back-btn c-top-back-btn--91-79 u-scroll-show">
       <div class="c-top-back-btn__icon">
-        <img src="./images/top-back-btn.svg" alt="">
+        <img src="./images/top-back-btn.svg" alt="top">
       </div>
     </a>
     

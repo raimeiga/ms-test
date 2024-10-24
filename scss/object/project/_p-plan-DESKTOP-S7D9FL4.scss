@@ -53,165 +53,170 @@
 .p-plan__table-wrap {
   padding-bottom: 2.8rem;   
   @include sp {
-   width: 100%;
    overflow-x: scroll;
    padding-bottom: 4rem;   
    margin-bottom: 1.9rem;
-   // cursor: pointer;   
+   // cursor: pointer;
   }
 }
 
 .p-plan-table { 
- // width: 100%; 
- min-width: 88rem;
- border-bottom: 0.05rem solid #000; 
- table-layout: auto; /* 各列の幅を均等に固定 */   
- // padding-bottom: 2.8rem; 
-   // ↑table要素はpaddingやmarginの挙動が制限される
-   // ので、親のp-plan__table-wrapに書いた。 
- @include sp {   
-  min-width: 67rem;  
-   // ↑カンプみたら、幅375px内に2マスが均等に入り込んでいて、
-   //  1マスが167.5pxなので、右にスクロールしたときに見える
-   //  残りの2マスも167.5px。4倍して670pxに設定
-  cursor: default;
- }
+  // width: 100%; 
+  min-width: 88rem;
+  border-bottom: 0.05rem solid #000; 
+  table-layout: auto; /* 各列の幅を均等に固定 */   
+  // padding-bottom: 2.8rem; 
+    // ↑table要素はpaddingやmarginの挙動が制限される
+    // ので、親のp-plan__table-wrapに書いた。 
+  @include sp {   
+   min-width: 67rem;
+    // ↑カンプみたら、幅375px内に2マスが均等に入り込んでいて、
+    //  1マスが167.5pxなので、右にスクロールしたときに見える
+    //  残りの2マスも167.5px。4倍して670pxに設定
+   cursor: default;
+  }
 }
 
 .p-plan-table__head {
- height: 8rem;
- border-bottom: 0.05rem solid #000;  
+  height: 8rem;
+  border-bottom: 0.05rem solid #000;  
 }
 
 .p-plan-table__head-th {
- color: #fff; 
- font-size: 2rem;
- font-weight: 600;
- line-height: calc(33 / 20); 
- border-inline: 0.05rem solid #000; 
- vertical-align: bottom;         // ←←←1
- @include sp {
+  color: #fff; 
   font-size: 2rem;
-  line-height: calc(25 / 20);
- }
+  font-weight: 600;
+  line-height: calc(33 / 20); 
+  border-inline: 0.05rem solid #000; 
+  vertical-align: bottom;         // ←←←1
+  @include sp {
+   font-size: 2rem;
+   line-height: calc(25 / 20);
+  }
 }
 
 .p-plan-table__head--bg-blk {
- background-color: #000;
- display: block;                  // ←←←2
- margin-top: 3rem;                // ←←←3
- padding-block: 1rem 0.7rem;      // ←←←4
+  background-color: #000;
+  display: block;                  // ←←←2
+  margin-top: 3rem;                // ←←←3
+  padding-block: 1rem 0.7rem;      // ←←←4
 }
 
 .p-plan-table__head--bg-red { 
- background-color: $color-red; 
- padding-bottom: 5px;             // ←←←5
+  background-color: $color-red; 
+  padding-bottom: 5px;             // ←←←5
 }
 
 .p-plan-table__head--recommend {
- font-size: 1.7rem;
- line-height: calc(17 / 17);  
+  font-size: 1.7rem;
+  line-height: calc(17 / 17);  
 }
 
 .p-plan-table__body {
- height: 8.5rem;
- color: #000; 
+  height: 8.5rem;
+  color: #000; 
 }
 
 .p-plan-table-body__category--price {
- width: 25%;
- font-size: 1.7rem;
- line-height: calc(30 / 17); 
- text-align: left; 
- padding: 0 2rem;
- vertical-align: middle; /* 下に寄せる */
- @include sp {
-   font-size: 1.6rem;
-   line-height: calc(30 / 16);
-   padding: 0 1rem;
- }
+  width: 25%;
+  font-size: 1.7rem;
+  line-height: calc(30 / 17); 
+  text-align: left; 
+  padding: 0 2rem;
+  vertical-align: middle; /* 下に寄せる */
+  @include sp {
+    font-size: 1.6rem;
+    line-height: calc(30 / 16);
+    padding: 0 1rem;
+  }
 }
 
 .p-plan-table-body__category {
- width: 25%;
- font-size: 1.7rem;
- line-height: calc(25 / 17); 
- text-align: left; 
- padding: 0 2rem;
- vertical-align: middle; /* 下に寄せる */
- @include sp {
-   font-size: 1.6rem;
-   line-height: calc(25 / 16);
-   padding: 0 1rem;
- }
+  width: 25%;
+  font-size: 1.7rem;
+  line-height: calc(25 / 17); 
+  text-align: left; 
+  padding: 0 2rem;
+  vertical-align: middle; /* 下に寄せる */
+  @include sp {
+    font-size: 1.6rem;
+    line-height: calc(25 / 16);
+    padding: 0 1rem;
+  }
 }
 
 .p-plan-table-body__price {
- width: 25%;
- font-size: 2.2rem;
- font-weight: 600;
- line-height: calc(33 / 22);
- border-left: 0.05rem solid #000; 
- vertical-align: middle; /* 下に寄せる */  
+  width: 25%;
+  font-size: 2.2rem;
+  font-weight: 600;
+  line-height: calc(33 / 22);
+  border-left: 0.05rem solid #000; 
+  vertical-align: middle; /* 下に寄せる */  
 }
 
 .p-plan-table-body__item {
- border-left: 0.05rem solid #000; 
- font-size: 1.7rem; 
- line-height: calc(25 / 17);
- vertical-align: middle; /* 下に寄せる */ 
+  border-left: 0.05rem solid #000; 
+  font-size: 1.7rem; 
+  line-height: calc(25 / 17);
+  vertical-align: middle; /* 下に寄せる */ 
 }
 
 .p-plan-table__body--grey {
- background-color: rgba(80, 80, 80, 0.149);
+  background-color: rgba(80, 80, 80, 0.149);
 }
 
 .p-plan-table__attention {
- font-size: 1.7rem;
- line-height: calc(25 / 17);
- text-align: left;
- @include sp {
-   font-size: 1.6rem;
-   line-height: calc(30 / 16);
- }
+  font-size: 1.7rem;
+  line-height: calc(25 / 17);
+  text-align: left;
+  @include sp {
+    font-size: 1.6rem;
+    line-height: calc(30 / 16);
+  }
 }
+
+
+
 
 /* スクロールトラックの背景部分 */
 .simplebar-track {
- width: 100%; 
+ width: 33.5rem;
  height: 2.5rem !important;
  background-color: rgba(80, 80, 80, 0.149) !important; /* 背景色 */
  border-radius: 0 !important; /* 四角くする */
- //overflow: hidden !important; 
+ //overflow: hidden !important;
+ 
 }
 
 /* Chrome, Safari (Webkit)用 */
 /* スクロールバー自体のスタイル */
 .simplebar-track.simplebar-horizontal .simplebar-scrollbar {
- background-color: rgba(80, 80, 80, 0) !important; /* スクロールバーの色 */
- // width: 10rem !important;
- height: inherit !important;   /* 高さ */ 
- top: 0; 
+ background-color: rgba(80, 80, 80, 0.251) !important; /* スクロールバーの色 */
+ width: 10rem !important; /* 幅 */
+ height: 2.3rem !important; /* 高さ */
+ margin-left: 1rem !important; /* 左余白 */
 }
 
 /* つまみの疑似要素 */
-.simplebar-track.simplebar-horizontal .simplebar-scrollbar:before {  
-  //top: -0.1rem !important;    
+.simplebar-track.simplebar-horizontal .simplebar-scrollbar:before {
+  height: 100% !important;
+  top: 0 !important;    
   height: inherit !important;  
   left: 0 !important;
   right: 0 !important;
-  background-color: rgba(80, 80, 80, 0.749) !important; /* スクロールバーの色 */
 }
 
 .simplebar-scrollbar:before { 
   border-radius: 0 !important; /* 角を四角に */
 }
 
+
 /* Firefox用 */
 * {
   scrollbar-width: thin; /* スクロールバーの幅 (thin, auto, none など) */
   scrollbar-color: rgba(80, 80, 80, 0.251) rgba(80, 80, 80, 0.149); /* つまみの色とトラックの背景色 */
 }
+
 
 /* Edge用 */
 body::-ms-scrollbar {
@@ -235,7 +240,6 @@ body::-ms-scrollbar-thumb:before {
   right: 0;
 }
 
-
 // // スクロールバー　simplebar（プラグイン）をhtmlで読み込み、
 // // jsに初期化のコードもあり。
 // /* Chrome, Safari用 (Webkit) */
@@ -243,8 +247,7 @@ body::-ms-scrollbar-thumb:before {
 // .simplebar-track.simplebar-horizontal {
 //   width: 100% !important;
 //   height: 2.6rem !important;
-//   background-color: rgba(80, 80, 80, 0.149); /* トラックの背景色 */
-//  }
+//   background-color: rgba(80, 80, 80, 0.149); /* トラックの背景色 */}
 
 // // つまみ
 // .simplebar-track.simplebar-horizontal .simplebar-scrollbar { 

@@ -42,10 +42,19 @@
 }
 
 .p-blog-details-main-related-article__image {
- width: 20rem;
- @include sp {
-  width: 16rem;
- }
+  width: 20rem;
+  height: 14rem;
+  overflow: hidden;
+  @include sp {
+    width: 16rem;
+    height: 11rem;
+  }
+}
+
+.p-blog-details-main-related-article__image img {
+  width: 100%;
+  height: 100%; 
+  object-fit: cover;
 }
 
 .p-blog-details-main-related-article__text p {

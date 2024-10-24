@@ -3,7 +3,7 @@
 
 
 .c-top-back-btn {
- //width: 6.8rem;
+ // width: 6.8rem;
  width: 68px;
  //height: 6.8rem;
  height: 68px;
@@ -12,14 +12,18 @@
  display: flex;
  justify-content: center;
  align-items: center;
+ // position: fixed;
+ // right: 10rem; 
+ // bottom: calc(91 / 1080 * 100vw);
  opacity: 0;
  visibility: hidden;
- transition: all .4s;
+ transition: background-color .4s;
  z-index: 999;
-}
-
-.c-top-back-btn__icon {
- width: 43%;
+ // @include sp {
+ //  position: fixed;   
+ //  right: 2rem; 
+ //  bottom: calc(79 / 375 * 100vw);  
+ // }
 }
 
 .c-top-back-btn:hover {
@@ -48,4 +52,7 @@
  }
 }
 
+.c-top-back-btn__icon {
+ width: 43%;
+}
 

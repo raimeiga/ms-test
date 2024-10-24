@@ -2254,10 +2254,22 @@ a {
 }
 
 .p-sidebar-mail__banner p {
+  position: absolute;
+  top: 8.5rem;
+  left: 2rem;
+  transform: translate(50%, -50%);
   color: #000;
   font-size: 1.8rem;
   font-weight: 600;
   line-height: 1.8333333333;
+}
+@media only screen and (max-width: 767px) {
+  .p-sidebar-mail__banner p {
+    position: absolute;
+    top: 11.5rem;
+    left: 5.6rem;
+    transform: translate(50%, -50%);
+  }
 }
 
 .p-sidebar-blog-search {
@@ -2357,12 +2369,15 @@ a {
 }
 
 .p-sidebar-reco-articles__title p {
-  max-height: 5.6rem; /* 必要な最大高さを設定 */
-  overflow: hidden; /* はみ出し部分を非表示 */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
   text-overflow: ellipsis;
   font-size: 1.7rem;
   line-height: 1.6470588235;
   text-align: left;
+  margin-bottom: 20px;
 }
 @media only screen and (max-width: 767px) {
   .p-sidebar-reco-articles__title p {
@@ -2786,6 +2801,17 @@ body::-ms-scrollbar-thumb:before {
   opacity: 0.5;
 }
 
+.p-result-list-list__image {
+  width: 100%;
+}
+
+.p-result-list-list__image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .p-result-list-list__title--pad20 {
   font-size: 2rem;
   font-weight: 600;
@@ -2826,6 +2852,13 @@ body::-ms-scrollbar-thumb:before {
 .p-result-details__image {
   width: 100%;
   position: relative;
+}
+
+.p-result-details__image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .p-result-details__title {
@@ -3209,9 +3242,16 @@ body::-ms-scrollbar-thumb:before {
   margin-top: 1.6rem;
 }
 
-.p-result-details-article__img {
+.p-result-details-article__image {
   width: 9.8rem;
   height: 6.8rem;
+}
+
+.p-result-details-article__image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .p-result-details-article__title {
@@ -3279,6 +3319,13 @@ body::-ms-scrollbar-thumb:before {
   .p-result-details-related-article-list__image {
     width: 16rem;
   }
+}
+
+.p-result-details-related-article-list__image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .p-result-details-related-article-list__title-and-date {

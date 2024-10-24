@@ -26,9 +26,10 @@
 
  
   <!-- スタイルシート読み込みに、キャッシュ削除のクエリを追記　style.css更新時に、ver=1.0.2とかに変更していくらしい　-->
- <link rel="stylesheet" type="text/css" href="css/style.css?ver=1.0.4"/>
+  <link rel="stylesheet" type="text/css" href="css/style.css?ver=2.0.4"/>
  
- 
+  <!-- Noto Sans JP フォントの読み込み -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -41,11 +42,11 @@
             <div class="p-header-logo__image">
               <picture>
                 <source media="(max-width: 767px)" srcset="./images/sp_logo-red20x31.svg">
-                <img src="./images/logo-red32x49.svg" alt="">
+                <img src="./images/logo-red32x49.svg" alt="きたむらミュージックスクール">
               </picture>
             </div>
             <div class="p-header-logo__text">
-              <h1>きたむら<br class="pc"><span>ミュージックスクール</span></h1>
+              <h2>きたむら<br class="pc"><span>ミュージックスクール</span></h2>
             </div>  
           </a>   
         </div>
@@ -83,11 +84,11 @@
        <div class="p-mv__image">
          <picture>
            <source media="(max-width: 767px)" srcset="./images/plan-sp.jpg">
-           <img src="./images/plan.jpg" alt="">
+           <img src="./images/plan.jpg" alt="プラン・料金">
          </picture> 
        </div>
        <div class="p-mv__contents">
-         <h2 class="p-mv__title" >プラン・ 料金</h2>
+         <h1 class="p-mv__title" >プラン・ 料金</h1>
        </div>  
      </div>    
      <!-- パンくずリスト -->
@@ -159,7 +160,6 @@
             </tr>          
           </tbody>          
          </table>    
-         
        </div>    
        <p class="p-plan-table__attention">※各サービスは１回ごとのオプション追加が可能です。詳しくは事務局までお問い合わせください。</p>                  
      </div>    
@@ -177,7 +177,7 @@
         </nav>
         <div class="p-footer__logo">
           <a href="index.html">
-            <img src="./images/logo-white.svg" alt="">
+            <img src="./images/logo-white.svg" alt="きたむらミュージックスクール">
            </a>
         </div>
         <p class="p-footer__copyright">Copyright<span style="font-size: 1em;">©</span>0000 KITAMURA music school Inc. <br class="sp">All Rights</p>
@@ -185,28 +185,28 @@
           <ul>
             <li>
               <a href="">
-                <img src="./images/icon-twitter.svg" alt="">
+                <img src="./images/icon-twitter.svg" alt="twitter">
               </a>
             </li> 
           </ul>
           <ul>
             <li>
               <a href="">
-                <img src="./images/icon-facebook.svg" alt="">
+                <img src="./images/icon-facebook.svg" alt="facebook">
               </a>
             </li> 
           </ul>
           <ul>
             <li>
               <a href="">
-                <img src="./images/icon-youtube.svg" alt="">
+                <img src="./images/icon-youtube.svg" alt="youtube">
               </a>
             </li> 
           </ul>
           <ul>
             <li>
               <a href="">
-                <img src="./images/icon-instagram.svg" alt=""> 
+                <img src="./images/icon-instagram.svg" alt="instagram"> 
               </a>
             </li> 
           </ul>       
@@ -216,7 +216,7 @@
     
     <a href="#" class="c-top-back-btn c-top-back-btn--91-79 u-scroll-show">
       <div class="c-top-back-btn__icon">
-        <img src="./images/top-back-btn.svg" alt="">
+        <img src="./images/top-back-btn.svg" alt="top">
       </div>
     </a>
     
@@ -230,9 +230,6 @@
   
   <!-- Simplebar(js) 読込 -->
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/simplebar@5.3.6/dist/simplebar.min.js"></script>
-  <!-- <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script> -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script> -->
   
   <!-- javascriptの読み込み -->
   <script src="./js/main.js"> </script>

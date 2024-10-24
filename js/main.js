@@ -1,5 +1,5 @@
 $(function() {
-
+ 
  // ハンバーガー
  $('.c-hamburger').click(function(){
    $(this).toggleClass('active')
@@ -10,9 +10,10 @@ $(function() {
    $('.c-hamburger').removeClass('active')
    $('.p-header-nav').removeClass('active')
  })
-
+ 
  // FVのスライダー
  $('.js-slider').slick({ 
+  // centerMode: true,
    autoplay: false, 
    arrows: true,
    slidesToShow: 3, // 3枚ずつ表示
@@ -24,16 +25,26 @@ $(function() {
        breakpoint: 768,
        settings: {      
          slidesToShow: 1, // 1枚表示
-         slidesToScroll: 1     
+         slidesToScroll: 1,
+         prevArrow: '<button type="button" class="slick-prev"><img src="images/arrow-prev-sp.svg" alt="Previous"></button>',  
+         nextArrow: '<button type="button" class="slick-next"><img src="images/arrow-next-sp.svg" alt="Next"></button>',     
        }
      }
    ]
  });
 
- // アコーディオンメニュー
- $('.p-qa-list__q').on('click', function(){
-   $(this).toggleClass('active');
-   $(this).next().slideToggle();
+ // アコーディオンメニューの初期化とクリックイベント
+ $('.p-qa-list__a').hide(); // 初期状態で非表示
+
+ $('.p-qa-list__q').on('click', function() {
+   $(this).toggleClass('active'); // 矢印の回転を制御
+   // $(this).addClass('active'); // 矢印の回転を制御
+   $(this).next('.p-qa-list__a').slideToggle(); // 対応する要素を開閉
+ });
+
+ $('.p-qa-list__a').on('click', function() {
+   $(this).slideUp(); // 閉じる
+   $(this).prev('.p-qa-list__q').removeClass('active'); // 矢印をリセット
  });
 
  // トップに戻るボタンの表示・非表示の切り替え
@@ -46,17 +57,28 @@ $(function() {
  });
 
  // SimpleBarの初期化
- const tableWrap = document.querySelector('.p-plan__table-wrap');
- if (tableWrap) {
-   new SimpleBar(tableWrap, {
-     autoHide: false,  // スクロールバーを常に表示
-     scrollbarMaxSize: 120, // スクロールバーの最大サイズ    
-    });
- }
+ // const tableWrap = document.querySelector('.p-plan__table-wrap');
+ // if (tableWrap) {
+ //   new SimpleBar(tableWrap, {
+ //     autoHide: false,  // スクロールバーを常に表示
+ //     scrollbarMaxSize: 120, // スクロールバーの最大サイズ  
+ //   });
+ // }
 
- 
- 
- $(window).on('scroll', function() {
+// 1remのピクセル値を取得
+const remToPx = (rem) => rem * parseFloat(getComputedStyle(document.documentElement).fontSize);
+
+// rem値をピクセルに変換して設定
+const tableWrap = document.querySelector('.p-plan__table-wrap');
+if (tableWrap) {
+  new SimpleBar(tableWrap, {
+    autoHide: false,  // スクロールバーを常に表示
+    // scrollbarMaxSize: remToPx(10), // 10remをpxに変換して指定
+  });
+}
+
+ // トップに戻るボタン、問い合わせボタン
+  $(window).on('scroll', function() {
   var footerOffset = $('footer').offset().top;  // フッターの位置
   var scrollPosition = $(window).scrollTop() + $(window).height();  // 現在のスクロール位置 + ウィンドウの高さ
   var isPC = $(window).width() > 767;  // PC画面かSP画面かを判定
@@ -74,58 +96,56 @@ $(function() {
           // PC画面の場合
           topBackBtn91_79.css({
               position: 'absolute',
-              bottom: 'calc(' + footerHeight + 'px + (91 / 1080 * 100vw))',  // フッター上端から指定の余白分上に配置
+              // bottom: 'calc(' + footerHeight + 'px + (91 / 1080 * 100vw))',  // フッター上端から指定の余白分上に配置
+              bottom: `calc(${footerHeight}px + 9.1rem)`, // フッター上端から9.1rem上に配置
               right: '10rem'
           });
 
           topBackBtn30_18.css({
               position: 'absolute',
-              bottom: 'calc(' + footerHeight + 'px + (30 / 1080 * 100vw))',  // フッター上端から指定の余白分上に配置
+              // bottom: 'calc(' + footerHeight + 'px + (30 / 1080 * 100vw))',  // フッター上端から指定の余白分上に配置
+              bottom: `calc(${footerHeight}px + 3rem)`, // フッター上端から3rem上に配置
               right: '10rem'
           });
 
           // お問い合わせボタンは常にフッターの上に配置
-          contactBtn.css({
-             position: 'absolute',
-             bottom: footerHeight + 'px',  // フッターの上端にピタリと配置
-             left: 'auto', // 左側の位置を自動設定
-             right: '0',   // 右側を0に設定
-             opacity: 1,
-             visibility: 'visible'
-          });
+      contactBtn.css({
+       position: 'absolute',
+       bottom: footerHeight + 'px',  // フッターの上端にピタリと配置
+       right: '0'
+   });
 
       } else {
           // SP画面の場合
           topBackBtn91_79.css({
               position: 'absolute',
-              bottom: 'calc(' + footerHeight + 'px + (79 / 375 * 100vw))',  // フッター上端からSP用の余白分上に配置
+              // bottom: 'calc(' + footerHeight + 'px + (79 / 375 * 100vw))',  // フッター上端からSP用の余白分上に配置
+              bottom: `calc(${footerHeight}px + 7.9rem)`, // フッター上端から7.9rem上に配置
               right: '2rem'
           });
 
           topBackBtn30_18.css({
               position: 'absolute',
-              bottom: 'calc(' + footerHeight + 'px + (18 / 375 * 100vw))',  // フッター上端からSP用の余白分上に配置
+              //bottom: 'calc(' + footerHeight + 'px + (18 / 375 * 100vw))',  // フッター上端からSP用の余白分上に配置
+              bottom: `calc(${footerHeight}px + 1.8rem)`, // フッター上端から1.8rem上に配置
               right: '2rem'
           });
 
           // お問い合わせボタンは常にフッターの上に配置
-          contactBtn.css({
-             position: 'absolute',
-             bottom: footerHeight + 'px',  // フッターの上端にピタリと配置
-             left: '50%', // 左側を50%に設定
-             transform: 'translateX(-50%)', // 中心を左に50%移動
-             opacity: 1,
-             visibility: 'visible'
-          });
-      }
-   
+      contactBtn.css({
+       position: 'absolute',
+       bottom: footerHeight + 'px',  // フッターの上端にピタリと配置
+       right: '2rem'
+   });
+      }     
 
   } else {
       if (isPC) {
           // PC画面の場合、通常時は画面右下に固定表示
           topBackBtn91_79.css({
               position: 'fixed',
-              bottom: 'calc(91 / 1080 * 100vw)',  // 固定表示
+              //bottom: 'calc(91 / 1080 * 100vw)',  // 固定表示
+              bottom: '9.1rem',  // 固定表示
               right: '10rem',
               opacity: 1,
               visibility: 'visible'
@@ -133,27 +153,28 @@ $(function() {
 
           topBackBtn30_18.css({
               position: 'fixed',
-              bottom: 'calc(30 / 1080 * 100vw)',  // 固定表示
+              // bottom: 'calc(30 / 1080 * 100vw)',  // 固定表示
+              bottom: '3rem',  // 固定表示
               right: '10rem',
               opacity: 1,
               visibility: 'visible'
           });
 
                  // お問い合わせボタンは常に画面下端に固定
-          contactBtn.css({
-             position: 'fixed',
-             bottom: '0',  // 固定表示
-             left: 'auto', // 左側の位置を自動設定
-             right: '0',   // 右側を0に設定
-             opacity: 1,
-             visibility: 'visible'
+             contactBtn.css({
+              position: 'fixed',
+              bottom: '0',  // 固定表示
+              right: '0',
+              opacity: 1,
+              visibility: 'visible'
           });
 
       } else {
           // SP画面の場合、通常時は画面右下に固定表示
           topBackBtn91_79.css({
               position: 'fixed',
-              bottom: 'calc(79 / 375 * 100vw)',  // 固定表示
+              //bottom: 'calc(79 / 375 * 100vw)',  // 固定表示
+              bottom: '7.9rem',  // 固定表示
               right: '2rem',
               opacity: 1,
               visibility: 'visible'
@@ -161,23 +182,25 @@ $(function() {
 
           topBackBtn30_18.css({
               position: 'fixed',
-              bottom: 'calc(18 / 375 * 100vw)',  // 固定表示
+              // bottom: 'calc(18 / 375 * 100vw)',  // 固定表示
+              bottom: '1.8rem',  // 固定表示
               right: '2rem',
               opacity: 1,
               visibility: 'visible'
           });
 
                  // お問い合わせボタンは常に画面下端に固定
-          contactBtn.css({
-             position: 'fixed',
-             bottom: '0',  // 固定表示
-             left: '50%', // 左側を50%に設定
-             transform: 'translateX(-50%)', // 中心を左に50%移動
-             opacity: 1,
-             visibility: 'visible'
+             contactBtn.css({
+              position: 'fixed',
+              bottom: '0',  // 固定表示
+              right: '2rem',
+              opacity: 1,
+              visibility: 'visible'
           });
       }      
   }
   
 });
+
 });
+

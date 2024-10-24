@@ -24,9 +24,10 @@
  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@5.3.6/dist/simplebar.min.css"/>
 
  <!-- スタイルシート読み込みに、キャッシュ削除のクエリを追記　style.css更新時に、ver=1.0.2とかに変更していくらしい　-->
- <link rel="stylesheet" type="text/css" href="css/style.css?ver=2.0.1"/>
-
+ <link rel="stylesheet" type="text/css" href="css/style.css?ver=2.0.4"/>
  
+ <!-- Noto Sans JP フォントの読み込み -->
+ <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -39,11 +40,11 @@
             <div class="p-header-logo__image">
               <picture>
                 <source media="(max-width: 767px)" srcset="./images/sp_logo-red20x31.svg">
-                <img src="./images/logo-red32x49.svg" alt="">
+                <img src="./images/logo-red32x49.svg" alt="きたむらミュージックスクール">
               </picture>
             </div>
             <div class="p-header-logo__text">
-              <h1>きたむら<br class="pc"><span>ミュージックスクール</span></h1>
+              <h2>きたむら<br class="pc"><span>ミュージックスクール</span></h2>
             </div>  
           </a>   
         </div>
@@ -79,30 +80,31 @@
       <!-- パンくずリスト -->
       <div class="c-breadcrumb">
         <a href="index.html" class="c-breadcrumb__text c-breadcrumb__text--2-lines">ホーム</a>
-        <p class="c-breadcrumb__text c-breadcrumb__text--2-lines">></p>
-        <p class="c-breadcrumb__text c-breadcrumb__text--2-lines">ブログ</p>
-        <p class="c-breadcrumb__text c-breadcrumb__text--2-lines">></p>
-        <p class="c-breadcrumb__text c-breadcrumb__text--2-lines">ギター</p>
-        <p class="c-breadcrumb__text c-breadcrumb__text--2-lines">></p><br class="sp">
+        <p class="c-breadcrumb__text c-breadcrumb__text--2-lines">&#62;</p>
+        <a href="blog_list.html" class="c-breadcrumb__text c-breadcrumb__text--2-lines">ブログ</a>
+        <p class="c-breadcrumb__text c-breadcrumb__text--2-lines">&#62;</p>
+        <a href="blog_details.html" class="c-breadcrumb__text c-breadcrumb__text--2-lines">ギター</a>
+        <p class="c-breadcrumb__text c-breadcrumb__text--2-lines">&#62;</p><br class="sp">
         <p class="c-breadcrumb__text c-breadcrumb__text--blog-details">アルペジオが劇的に向上する３つの習慣</p>
-      </div>
+     </div>
+
       <div class="p-blog-details__inner l-inner">
         <div class="p-blog-details__main p-blog-details-main">            
           <div class="p-blog-details-main__01-image">
             <picture>
               <source media="(max-width: 767px)" srcset="./images/blog-details-mv-sp.jpg">
-              <img src="./images/blog-details-mv.jpg" alt="">
+              <img src="./images/blog-details-mv.jpg" alt="アルペジオが劇的に向上する３つの習慣">
             </picture>
           </div>  
           <p class="c-caption c-caption--w-pc80-sp90">ギター</p>
-          <p class="p-blog-details-main__01-title">アルペジオが劇的に向上する３つの習慣</p>
+          <h1 class="p-blog-details-main__01-title">アルペジオが劇的に向上する３つの習慣</h1>
           <time datetime="2024-10-01" class="p-blog-details-main__date">2024.10.01</time>
           <div class="p-blog-details-main__sns-links">
             <a href="">           
               <div class="p-blog-details-main__sns-link p-blog-details-main__sns-link--fb">   
                 <picture>
                   <source media="(max-width: 767px)" srcset="./images/fb-sp.svg">
-                  <img src="./images/facebook.svg" alt="">
+                  <img src="./images/facebook.svg" alt="facebook">
                 </picture>              
               </div>
             </a>
@@ -110,7 +112,7 @@
               <div class="p-blog-details-main__sns-link p-blog-details-main__sns-link--tw">         
                 <picture>         
                   <source media="(max-width: 767px)" srcset="./images/tw-sp.svg">
-                  <img src="./images/tw.svg" alt="">
+                  <img src="./images/tw.svg" alt="twitter">
                 </picture>   
               </div>
             </a>
@@ -118,7 +120,7 @@
               <div class="p-blog-details-main__sns-link p-blog-details-main__sns-link--hatena">
                 <picture>               
                   <source media="(max-width: 767px)" srcset="./images/hatena-sp.svg">
-                  <img src="./images/hatena.svg" alt="">
+                  <img src="./images/hatena.svg" alt="haten">
                 </picture>  
               </div>
             </a>
@@ -126,7 +128,7 @@
               <div class="p-blog-details-main__sns-link p-blog-details-main__sns-link--line">
                 <picture>                     
                   <source media="(max-width: 767px)" srcset="./images/line-sp.svg">
-                  <img src="./images/line.svg" alt="">
+                  <img src="./images/line.svg" alt="line">
                 </picture>
               </div>
             </a>
@@ -134,7 +136,7 @@
               <div class="p-blog-details-main__sns-link p-blog-details-main__sns-link--pocket">
                 <picture>                 
                   <source media="(max-width: 767px)" srcset="./images/pocket-sp.svg">
-                  <img src="./images/pocket.svg" alt="">
+                  <img src="./images/pocket.svg" alt="pocket">
                 </picture>   
               </div>   
             </a>             
@@ -153,7 +155,7 @@
           <div class="p-blog-details-main__02-image">
             <picture>
               <source media="(max-width: 767px)" srcset="./images/blog-details-sp__MEGANE.jpg">
-              <img src="./images/blog-details__MEGANE.jpg" alt="">
+              <img src="./images/blog-details__MEGANE.jpg" alt="技術面はプロによるマンツーマン授業！">
             </picture>
           </div>
           <ul class="p-blog-details-main__02-lists">
@@ -165,7 +167,7 @@
           <h3 class="p-blog-details-main__03-title">H3見出しが入ります。H3見出しが入ります。</h3>
           <div class="p-blog-details-main__03-text-box">
             <div class="p-blog-details-main__03-text-box-image">
-              <img src="./images/path42.svg" alt="">
+              <img src="./images/path42.svg" alt="引用">
             </div> 
             <p class="p-blog-details-main__03-text-box-text">
               本文が入ります。本文が入ります。本文が入ります。本文が入ります。
@@ -186,7 +188,7 @@
                 </div>
                 <div class="p-blog-details-main__article-item-02">
                   <div class="p-blog-details-main__article-image pc">
-                    <img src="./images/blog-details98.jpg" alt="">
+                    <img src="./images/blog-details98.jpg" alt="フォロワーではなくファンを増やせとは？">
                   </div>
                   <p class="p-blog-details-main__article-title u-flex-1">タイトルが入ります。タイトルが入ります。タイトルが入</p>
                 </div>
@@ -199,7 +201,7 @@
               </div>
               <div class="p-blog-details-main__article-item-02">
                 <div class="p-blog-details-main__article-image pc">
-                  <img src="./images/blog-details98.jpg" alt="">
+                  <img src="./images/blog-details98.jpg" alt="フォロワーではなくファンを増やせとは？">
                 </div>
                 <p class="p-blog-details-main__article-title u-flex-1">タイトルが入ります。タイトルが入ります。タイトルが入</p>
               </div>
@@ -211,13 +213,12 @@
             <div class="p-blog-details-main-related-articles__label">
               <p>関連記事</p>
             </div>            
-            <div class="p-blog-details-main-related-article__lists">
-              
+            <div class="p-blog-details-main-related-article__lists">              
                 <div class="p-blog-details-main-related-article__list">
                   <div class="p-blog-details-main-related-article__image">
                     <picture>
                       <source media="(max-width: 767px)" srcset="./images/blog-details-sp160.110.jpg">
-                      <img src="./images/blog-details200.140.jpg" alt="">
+                      <img src="./images/blog-details200.140.jpg" alt="フォロワーではなくファンを増やせとは？">
                     </picture>
                   </div>
                   <p class="c-caption c-caption--w80">ギター</p>
@@ -231,7 +232,7 @@
                   <div class="p-blog-details-main-related-article__image">
                     <picture>
                       <source media="(max-width: 767px)" srcset="./images/blog-details-sp160.110.jpg">
-                      <img src="./images/blog-details200.140.jpg" alt="">
+                      <img src="./images/blog-details200.140.jpg" alt="フォロワーではなくファンを増やせとは？">
                     </picture>
                   </div>
                   <p class="c-caption c-caption--w80">ギター</p>
@@ -245,7 +246,7 @@
                  <div class="p-blog-details-main-related-article__image">
                    <picture>
                      <source media="(max-width: 767px)" srcset="./images/blog-details-sp160.110.jpg">
-                     <img src="./images/blog-details200.140.jpg" alt="">
+                     <img src="./images/blog-details200.140.jpg" alt="フォロワーではなくファンを増やせとは？">
                    </picture>
                  </div>
                  <p class="c-caption c-caption--w80">ギター</p>
@@ -267,6 +268,12 @@
             </div>
             <a href="">       
               <div class="p-sidebar-mail__banner">
+                <div class="p-sidebar-mail__banner-image">
+                  <picture>
+                    <source media="(max-width: 767px)" srcset="./images/banner-sp.jpg">
+                    <img src="./images/banner.jpg" alt="">
+                  </picture>
+                </div>
                 <p>バナー広告</p>                   
               </div>   
             </a>                     
@@ -283,7 +290,7 @@
                     <button type="submit" class="p-sidebar-blog__search-button">                   
                       <picture>
                         <source media="(max-width: 767px)" srcset="./images/icon-search-btn-sp.svg">
-                        <img src="./images/icon-search-btn.svg" class="search-icon" alt="検索ボタンのアイコン">
+                        <img src="./images/icon-search-btn.svg" class="search-icon" alt="検索">
                       </picture>
                     </button>
                   </div>
@@ -297,28 +304,40 @@
             </div>            
             <a href="">
               <div class="p-sidebar-reco-articles__list">                
-                <div class="p-sidebar-reco-articles__image">                  
+                <div class="p-sidebar-reco-articles__image">    
+                  <picture>
+                    <source media="(max-width: 767px)" srcset="./images/blog-details-sp160.110.jpg">
+                    <img src="./images/blog-details-sp160.110.jpg" alt="">
+                  </picture>              
                 </div>
                 <div class="p-sidebar-reco-articles__title u-flex-1">
-                  <p>タイトルが入ります。タイトル</p>
+                  <p>タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。</p>
                 </div>
               </div>  
             </a>
             <a href="">
               <div class="p-sidebar-reco-articles__list">                
-                <div class="p-sidebar-reco-articles__image">                  
+                <div class="p-sidebar-reco-articles__image"> 
+                  <picture>
+                    <source media="(max-width: 767px)" srcset="./images/blog-details-sp160.110.jpg">
+                    <img src="./images/blog-details-sp160.110.jpg" alt="">
+                  </picture>                   
                 </div>
                 <div class="p-sidebar-reco-articles__title u-flex-1">
-                  <p>タイトルが入ります。タイトル</p>
+                 <p>タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。</p>
                 </div>
               </div>  
             </a>
             <a href="">
               <div class="p-sidebar-reco-articles__list">                
-                <div class="p-sidebar-reco-articles__image">                  
+                <div class="p-sidebar-reco-articles__image"> 
+                  <picture>
+                   <source media="(max-width: 767px)" srcset="./images/blog-details-sp160.110.jpg">
+                   <img src="./images/blog-details-sp160.110.jpg" alt="">
+                 </picture>                
                 </div>
                 <div class="p-sidebar-reco-articles__title u-flex-1">
-                  <p>タイトルが入ります。タイトル</p>
+                 <p>タイトルが入ります。タイトルが入ります。タイトルが入ります。タイトルが入ります。</p>
                 </div>
               </div>  
             </a> 
@@ -350,7 +369,7 @@
         </nav>
         <div class="p-footer__logo">
           <a href="index.html">
-            <img src="./images/logo-white.svg" alt="">
+            <img src="./images/logo-white.svg" alt="きたむらミュージックスクール">
            </a>
         </div>
         <p class="p-footer__copyright">Copyright<span style="font-size: 1em;">©</span>0000 KITAMURA music school Inc. <br class="sp">All Rights</p>
@@ -358,39 +377,38 @@
           <ul>
             <li>
               <a href="">
-                <img src="./images/icon-twitter.svg" alt="">
+                <img src="./images/icon-twitter.svg" alt="twitter">
               </a>
             </li> 
           </ul>
           <ul>
             <li>
               <a href="">
-                <img src="./images/icon-facebook.svg" alt="">
+                <img src="./images/icon-facebook.svg" alt="facebook">
               </a>
             </li> 
           </ul>
           <ul>
             <li>
               <a href="">
-                <img src="./images/icon-youtube.svg" alt="">
+                <img src="./images/icon-youtube.svg" alt="youtube">
               </a>
             </li> 
           </ul>
           <ul>
             <li>
               <a href="">
-                <img src="./images/icon-instagram.svg" alt=""> 
+                <img src="./images/icon-instagram.svg" alt="instagram"> 
               </a>
             </li> 
           </ul>       
         </div>
       </div>
-    </footer>        
-    
+    </footer>            
     
     <a href="#" class="c-top-back-btn c-top-back-btn--91-79 u-scroll-show">
       <div class="c-top-back-btn__icon">
-        <img src="./images/top-back-btn.svg" alt="">
+        <img src="./images/top-back-btn.svg" alt="top">
       </div>
     </a>    
     <a href="contact_form.html" class="c-btn c-btn--fixed u-scroll-show">お問い合わせ</a>
