@@ -35,6 +35,12 @@
   }
 }
 
+.p-blog__lists a {
+ display: block;
+ width: 26rem;
+}
+
+
 // ブログ一覧のみ
 .p-blog__lists-column {  
   width: 100%;
@@ -49,7 +55,7 @@
 }
 
 .p-blog__list {
-  width: 26rem; 
+  // width: 26rem; 
   transition: opacity .4s;
   position: relative;
   @include sp {
