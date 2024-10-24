@@ -9,7 +9,7 @@ $(function() {
  $('.header__nav ul li a').click(function(){
    $('.c-hamburger').removeClass('active')
    $('.p-header-nav').removeClass('active')
- })
+ });
  
  // FVのスライダー
  $('.js-slider').slick({ 
@@ -61,6 +61,8 @@ $(function() {
   const scrollTop = $(this).scrollTop();
   const footerOffset = $('footer').offset().top; // footerの上端の位置を取得
   const windowHeight = $(window).height();
+
+  console.log("Footer offset:", footerOffset); // footerの位置をログに出力
   
   // スクロール位置が200px以上の場合
   if (scrollTop > 200) {
@@ -93,7 +95,6 @@ $(function() {
 
 // 1remのピクセル値を取得
 const remToPx = (rem) => rem * parseFloat(getComputedStyle(document.documentElement).fontSize);
-
 // rem値をピクセルに変換して設定
 const tableWrap = document.querySelector('.p-plan__table-wrap');
 if (tableWrap) {
