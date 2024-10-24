@@ -189,6 +189,19 @@ a {
 @media only screen and (max-width: 767px) {
   .c-btn--fixed {
     width: 33.5rem;
+    right: 2rem;
+  }
+}
+
+.c-btn--fixed.fixed-position-con {
+  position: absolute;
+  bottom: 27.8rem;
+  right: 0;
+}
+@media only screen and (max-width: 767px) {
+  .c-btn--fixed.fixed-position-con {
+    right: 2rem;
+    bottom: 30.3rem;
   }
 }
 
@@ -300,7 +313,7 @@ a {
   align-items: center;
   opacity: 0;
   visibility: hidden;
-  transition: background-color 0.4s;
+  transition: background-color 0.4s, opacity 0.4s, visibility 0.4s;
   z-index: 999;
 }
 
@@ -311,26 +324,50 @@ a {
 .c-top-back-btn--91-79 {
   position: fixed;
   right: 10rem;
-  bottom: 8.4259259259vw;
+  bottom: 9.1rem;
 }
 @media only screen and (max-width: 767px) {
   .c-top-back-btn--91-79 {
     position: fixed;
     right: 2rem;
-    bottom: 21.0666666667vw;
+    bottom: 7.9rem;
+  }
+}
+
+.c-top-back-btn--91-79.fixed-position-long {
+  position: absolute;
+  right: 10rem;
+  bottom: 36.9rem;
+}
+@media only screen and (max-width: 767px) {
+  .c-top-back-btn--91-79.fixed-position-long {
+    right: 2rem;
+    bottom: 38.1rem;
   }
 }
 
 .c-top-back-btn--30-18 {
   position: fixed;
   right: 10rem;
-  bottom: 2.7777777778vw;
+  bottom: 3rem;
 }
 @media only screen and (max-width: 767px) {
   .c-top-back-btn--30-18 {
     position: fixed;
     right: 2rem;
-    bottom: 4.8vw;
+    bottom: 1.8rem;
+  }
+}
+
+.c-top-back-btn--30-18.fixed-position-short {
+  position: absolute;
+  right: 10rem;
+  bottom: 30.8rem;
+}
+@media only screen and (max-width: 767px) {
+  .c-top-back-btn--30-18.fixed-position-short {
+    right: 2rem;
+    bottom: 32.1rem;
   }
 }
 
