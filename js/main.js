@@ -61,8 +61,6 @@ $(function() {
   const scrollTop = $(this).scrollTop();
   const footerOffset = $('footer').offset().top; // footerの上端の位置を取得
   const windowHeight = $(window).height();
-
-  console.log("Footer offset:", footerOffset); // footerの位置をログに出力
   
   // スクロール位置が200px以上の場合
   if (scrollTop > 200) {
